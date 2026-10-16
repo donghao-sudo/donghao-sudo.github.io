@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hao Dong</title>
+<style>
+/* Layout: one quiet reading column (~720px), profile text left + photo right, then plain sections. Single black theme. */
+:root{
+  --bg:#000000; --fg:#e8e8e8; --muted:#9a9a9a; --line:#2a2a2a; --accent:#8ab8e6; --chip:#151515;
+  --display:"Times New Roman",Times,"Liberation Serif",serif;
+  --body:"Times New Roman",Times,"Liberation Serif",serif;
+  color-scheme:dark;
+}
+
+body{background:var(--bg);color:var(--fg);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:720px;margin:0 auto}
+
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;border-bottom:1px solid var(--line);font-size:15px}
+nav .brand{color:var(--fg);font-weight:600}
+nav .links{display:flex;gap:20px}
+nav .links a{color:var(--muted)}
+
+.profile{display:grid;grid-template-columns:1fr 168px;gap:36px;align-items:start;padding-block:48px 8px}
+.profile>div{min-width:0}
+h1{font:600 2.1rem/1.15 var(--display);margin:0 0 10px;text-wrap:balance}
+.affil{color:var(--muted);font-size:15px;line-height:1.55;margin:0 0 20px}
+.profile p{margin:0 0 14px}
+.photo{width:168px;height:168px;border-radius:50%;object-fit:cover;background:var(--chip);
+  display:flex;align-items:center;justify-content:center;font:600 2.6rem var(--display);color:var(--accent)}
+.note{background:var(--chip);border-radius:6px;padding:10px 14px;font-size:15px}
+.contact{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:15px;font-weight:500}
+
+h2{font:600 1.45rem/1.2 var(--display);margin:56px 0 20px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+
+.pub{display:grid;grid-template-columns:180px 1fr;gap:20px;padding-block:14px}
+.pub>div{min-width:0}
+.thumb{width:100%;max-width:100%;aspect-ratio:16/10;border-radius:4px;background:var(--chip);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.pub h3{font:600 1.05rem/1.35 var(--body);margin:0 0 6px}
+.authors{font-size:14.5px;color:var(--muted);margin:0 0 6px}
+.authors b{color:var(--fg);font-weight:600}
+.venue{font-size:14.5px;margin:0}
+.venue i{font-style:italic}
+.award{font-size:14px;margin:4px 0 0}
+.plinks{display:flex;gap:12px;margin-top:6px;font-size:14px}
+.plinks a{border:1px solid var(--line);padding:1px 9px;border-radius:4px}
+.legend{font-size:13px;color:var(--muted);margin-top:10px}
+
+.proj{padding-block:10px}
+.proj h3{font:600 1.05rem/1.35 var(--body);margin:0 0 2px}
+.meta{font-size:14.5px;color:var(--muted);margin:0 0 6px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.proj p{margin:0}
+.edu{display:grid;gap:10px}
+.edu div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.edu span{color:var(--muted);font-size:14.5px}
+ul.plain{margin:0;padding-left:20px}
+ul.plain li{margin-bottom:6px}
+footer{margin-top:64px;padding-block:24px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px}
+
+@media (max-width:620px){
+  .profile{grid-template-columns:1fr;gap:20px;padding-block:32px 0}
+  .photo{order:-1;width:120px;height:120px;font-size:2rem}
+  .pub{grid-template-columns:1fr;gap:10px}
+  .thumb{max-width:320px}
+  nav .links{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap" id="top">
+  <nav>
+    <a class="brand" href="#top">Hao Dong</a>
+    <div class="links">
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <section class="profile">
+    <div>
+      <h1>Hao Dong</h1>
+      <p class="affil">M.S. in Computer Science, Machine Learning<br>University of Southern California</p>
+      <p>I am a master's student at <a href="https://www.usc.edu/">USC</a> working on robot learning. I work with Prof. <a href="https://yuewang.xyz/">Yue Wang</a> in the <a href="https://psi-lab.ai/">Physical Superintelligence (PSI) Lab</a>, where I collect humanoid teleoperation data and deploy vision-language-action policies on real robots.</p>
+      <p>My research interests include vision-language-action models, world action models, preference optimization for robot policies, and humanoid manipulation.</p>
+      <p>Before USC, I received my B.S. in Statistics from <a href="https://www.ucla.edu/">UCLA</a>.</p>
+      <div class="contact">
+        <a href="mailto:donghao@usc.edu">Email</a>
+        <a href="https://www.linkedin.com/in/hao-dong-711324309/">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">CV</a>
+      </div>
+    </div>
+    <div class="photo" aria-label="Profile photo placeholder">HD</div>
+  </section>
+
+  <h2 id="publications">Publications</h2>
+
+  <article class="proj">
+    <h3><a href="https://rolling-wam.github.io/">Rolling-WAM: World Action Models with Rolling Imagination</a></h3>
+    <p class="authors"><a href="https://zyinghua.github.io/">Yinghua Zhou</a>*, <a href="https://junjieye.com/">Junjie Ye</a>*, <a href="https://zhaoy37.github.io/">Yiqi Zhao</a>, <b>Hao Dong</b>, <a href="https://celinawa.github.io/">Celina Shiyu Wang</a>, <a href="https://gelev97.github.io/">Ruohai Ge</a>, Tingyi Yang, <a href="https://basile.be/">Basile Van Hoorick</a>, <a href="https://uscresl.org/principal-investigator/">Gaurav S. Sukhatme</a>, <a href="https://vitorguizilini.github.io/">Vitor Campagnolo Guizilini</a>†, <a href="https://yuewang.xyz/">Yue Wang</a>†</p>
+    <p class="venue"><i>arXiv 2026</i></p>
+    <div class="plinks"><a href="https://arxiv.org/abs/2609.30247">Paper</a><a href="https://rolling-wam.github.io/">Project</a><a href="https://github.com/zyinghua/Rolling-WAM">Code</a></div>
+  </article>
+
+  <article class="proj">
+    <h3><i>Z</i>-sight: Unifying Vision-Language-Action and Latent World Modeling</h3>
+    <p class="authors"><a href="https://junjieye.com/">Junjie Ye</a>*, <a href="https://zhaoy37.github.io/">Yiqi Zhao</a>*, <a href="https://scholar.google.com/citations?user=EbIwTigAAAAJ&hl=en">Muchen Xu</a>*, <a href="https://celinawa.github.io/">Celina Shiyu Wang</a>, <b>Hao Dong</b>, <a href="https://gelev97.github.io/">Ruohai Ge</a>, <a href="https://rongxuezoe.github.io/">Rong Xue</a>, <a href="https://benkolligs.com/">Benjamin J Kolligs</a>, Aditya Dutt, Nassim A. Samad, <a href="https://jdeshmukh.github.io/">Jyotirmoy V. Deshmukh</a>, <a href="https://yuewang.xyz/">Yue Wang</a>†, <a href="https://yuliangguo.github.io/">Yuliang Guo</a>†</p>
+    <p class="venue"><i>In Submission</i></p>
+  </article>
+
+  <p class="legend">* equal contribution · † equal advising</p>
+
+  <h2 id="projects">Research Projects</h2>
+
+  <article class="proj">
+    <h3>Humanoid Data Collection and VLA Deployment</h3>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul 2026 – Present</span></p>
+    <p>Collected VR-teleoperation demonstrations on two humanoids (Unitree G1, Dexmate Vega-1) and built multi-session LeRobot datasets for training. Deployed trained VLA checkpoints on both robots through a Dockerized policy server, rehearsing every run in MuJoCo first. Wrote the asynchronous action-chunk execution and ACT-style temporal ensembling layer of the shared inference stack.</p>
+  </article>
+
+  <article class="proj">
+    <h3>Z-sight: Native-Space Foresight VLA for Humanoid Manipulation</h3>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul – Sep 2026</span></p>
+    <p>Contributed to a 3.2B-parameter VLA that predicts future visual features alongside actions, reaching 62% average success on five real-world Unitree G1 tasks, compared with 32% for π0.5 and GR00T N1.7 and 46% for Fast-WAM. Collected 455 VR-teleoperated G1 demonstrations across 10 household tasks, post-trained the model on them with a frozen VLM and 20% cross-embodiment replay, and deployed it on a single RTX 4090 at 10 Hz for real-robot evaluation.</p>
+  </article>
+
+  <article class="proj">
+    <h3><a href="https://rolling-wam.github.io/">Rolling-Window World Action Model</a></h3>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul – Sep 2026</span></p>
+    <p>Reworked a world action model's joint video-action denoising into a sliding-window schedule, so each replanning cycle fully denoises only the next action chunk while farther chunks keep refining. Validated in MuJoCo and on a physical Unitree G1. Part of <a href="https://rolling-wam.github.io/">Rolling-WAM: World Action Models with Rolling Imagination</a>.</p>
+  </article>
+
+  <article class="proj">
+    <h3>Dual-Reference DPO for Continual VLA Adaptation</h3>
+    <p class="meta"><span>USC PSI Lab</span><span>Apr 2026</span></p>
+    <p>Designed a mixed-reference flow-matching DPO objective that adapts a SmolVLA policy to new manipulation tasks without forgetting earlier ones, raising all three LIBERO tasks above the pretrained baseline (bowl 60%→70%, drawer 40%→50%, push 40%→55%). Preference pairs came from automatic rollouts with no human labels.</p>
+  </article>
+
+  <h2>Education</h2>
+  <div class="edu">
+    <div><b>M.S. in Computer Science, University of Southern California</b></div>
+    <div><b>B.S. in Statistics, University of California, Los Angeles</b></div>
+  </div>
+
+  <footer>© 2026 Hao Dong · Los Angeles, CA</footer>
+</div>
+</body>
+</html>
