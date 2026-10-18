@@ -126,25 +126,25 @@ footer{margin-top:64px;padding-block:24px 40px;border-top:1px solid var(--line);
 
   <article class="proj">
     <h3>Humanoid Data Collection and VLA Deployment</h3>
-    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul 2026 – Present</span></p>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span></p>
     <p>Collected VR-teleoperation demonstrations on two humanoids (Unitree G1, Dexmate Vega-1) and built multi-session LeRobot datasets for training. Deployed trained VLA checkpoints on both robots through a Dockerized policy server, rehearsing every run in MuJoCo first. Wrote the asynchronous action-chunk execution and ACT-style temporal ensembling layer of the shared inference stack.</p>
   </article>
 
   <article class="proj">
     <h3><a href="https://z-sight.pages.dev/">Z-sight: Native-Space Foresight VLA for Humanoid Manipulation</a></h3>
-    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul – Sep 2026</span></p>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span></p>
     <p>Contributed to a 3.2B-parameter VLA that predicts future visual features alongside actions, reaching 62% average success on five real-world Unitree G1 tasks, compared with 32% for π0.5 and GR00T N1.7 and 46% for Fast-WAM. Collected 455 VR-teleoperated G1 demonstrations across 10 household tasks, post-trained the model on them with a frozen VLM and 20% cross-embodiment replay, and deployed it on a single RTX 4090 at 10 Hz for real-robot evaluation.</p>
   </article>
 
   <article class="proj">
     <h3><a href="https://rolling-wam.github.io/">Rolling-Window World Action Model</a></h3>
-    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span><span>Jul – Sep 2026</span></p>
+    <p class="meta"><span>USC PSI Lab, advised by Prof. Yue Wang</span></p>
     <p>Reworked a world action model's joint video-action denoising into a sliding-window schedule, so each replanning cycle fully denoises only the next action chunk while farther chunks keep refining. Validated in MuJoCo and on a physical Unitree G1. Part of <a href="https://rolling-wam.github.io/">Rolling-WAM: World Action Models with Rolling Imagination</a>.</p>
   </article>
 
   <article class="proj">
     <h3>Dual-Reference DPO for Continual VLA Adaptation</h3>
-    <p class="meta"><span>USC PSI Lab</span><span>Apr 2026</span></p>
+    <p class="meta"><span>USC PSI Lab</span></p>
     <p>Designed a mixed-reference flow-matching DPO objective that adapts a SmolVLA policy to new manipulation tasks without forgetting earlier ones, raising all three LIBERO tasks above the pretrained baseline. Preference pairs came from automatic rollouts with no human labels.</p>
   </article>
 
