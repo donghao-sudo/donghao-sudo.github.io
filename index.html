@@ -37,10 +37,9 @@ h1{font:600 2.1rem/1.15 var(--display);margin:0 0 10px;text-wrap:balance}
 
 h2{font:600 1.45rem/1.2 var(--display);margin:56px 0 20px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 
-.pub{display:grid;grid-template-columns:180px 1fr;gap:20px;padding-block:14px}
+.pub{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:start;padding-block:14px}
 .pub>div{min-width:0}
-.thumb{width:100%;max-width:100%;aspect-ratio:16/10;border-radius:4px;background:var(--chip);border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.thumb{display:block;width:100%;max-width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px;background:var(--chip);border:1px solid var(--line)}
 .pub h3{font:600 1.05rem/1.35 var(--body);margin:0 0 6px}
 .authors{font-size:14.5px;color:var(--muted);margin:0 0 6px}
 .authors b{color:var(--fg);font-weight:600}
@@ -101,18 +100,24 @@ footer{margin-top:64px;padding-block:24px 40px;border-top:1px solid var(--line);
 
   <h2 id="publications">Publications</h2>
 
-  <article class="proj">
+  <article class="pub">
+    <video class="thumb" src="https://zhaoy37.github.io/publication/zhou-2026-rollingwam/teaser.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Rolling-WAM teaser video"></video>
+    <div>
     <h3><a href="https://rolling-wam.github.io/">Rolling-WAM: World Action Models with Rolling Imagination</a></h3>
     <p class="authors"><a href="https://zyinghua.github.io/">Yinghua Zhou</a>*, <a href="https://junjieye.com/">Junjie Ye</a>*, <a href="https://zhaoy37.github.io/">Yiqi Zhao</a>, <b>Hao Dong</b>, <a href="https://celinawa.github.io/">Celina Shiyu Wang</a>, <a href="https://gelev97.github.io/">Ruohai Ge</a>, Tingyi Yang, <a href="https://basile.be/">Basile Van Hoorick</a>, <a href="https://uscresl.org/principal-investigator/">Gaurav S. Sukhatme</a>, <a href="https://vitorguizilini.github.io/">Vitor Campagnolo Guizilini</a>†, <a href="https://yuewang.xyz/">Yue Wang</a>†</p>
     <p class="venue"><i>arXiv 2026</i></p>
     <div class="plinks"><a href="https://arxiv.org/abs/2609.30247">Paper</a><a href="https://rolling-wam.github.io/">Project</a><a href="https://github.com/zyinghua/Rolling-WAM">Code</a></div>
+    </div>
   </article>
 
-  <article class="proj">
+  <article class="pub">
+    <img class="thumb" src="assets/zsight.jpg" alt="Z-sight humanoid robots performing household tasks" loading="lazy">
+    <div>
     <h3><a href="https://z-sight.pages.dev/"><i>Z</i>-sight: Unifying Vision-Language-Action and Latent World Modeling</a></h3>
     <p class="authors"><a href="https://junjieye.com/">Junjie Ye</a>*, <a href="https://zhaoy37.github.io/">Yiqi Zhao</a>*, <a href="https://scholar.google.com/citations?user=EbIwTigAAAAJ&hl=en">Muchen Xu</a>*, <a href="https://celinawa.github.io/">Celina Shiyu Wang</a>, <b>Hao Dong</b>, <a href="https://gelev97.github.io/">Ruohai Ge</a>, <a href="https://rongxuezoe.github.io/">Rong Xue</a>, <a href="https://benkolligs.com/">Benjamin J Kolligs</a>, Aditya Dutt, Nassim A. Samad, <a href="https://jdeshmukh.github.io/">Jyotirmoy V. Deshmukh</a>, <a href="https://yuewang.xyz/">Yue Wang</a>†, <a href="https://yuliangguo.github.io/">Yuliang Guo</a>†</p>
     <p class="venue"><i>In Submission</i></p>
     <div class="plinks"><a href="https://z-sight.pages.dev/">Project</a></div>
+    </div>
   </article>
 
   <p class="legend">* equal contribution · † equal advising</p>
